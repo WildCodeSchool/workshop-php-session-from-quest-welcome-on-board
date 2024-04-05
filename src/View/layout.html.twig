@@ -1,21 +1,28 @@
-<!doctype html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/assets/images/favicon.png">
+<!DOCTYPE html>
+<html lang="en">
 
-    <title>{% block title %}{% endblock %}</title>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Welcome on board</title>
+		<title>
+			{% block title %}{% endblock %}
+		</title>
+		<link rel="stylesheet" href="/assets/css/style.css"> 
+		{% block stylesheet %}{% endblock %}
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+	</head>
 
-    <link rel="stylesheet" href="/assets/css/style.css">
-    {% block stylesheet %}{% endblock %}
-</head>
-
-<body>
-    {% block content %}{% endblock %}
-    {% block javascript %}{% endblock %}
-</body>
+	<body>
+		{% block header %}
+			{{ include('_navbar.html.twig') }}
+		{% endblock %}
+		{% block content %}{% endblock %}
+		{% block footer %}
+			{{ include('_footer.html.twig') }}
+		{% endblock %}
+		{% block javascript %}{% endblock %}
+	</body>
 </html>
-
-
