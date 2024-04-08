@@ -2,8 +2,9 @@
 
 The aim of this short workshop is to practice the PHP session in an MVC context.
 
-## Goal
-Store the user data sent from the welcome form in the PHP session and display a personalised message when the user is redirected to the  `/form-success` page.
+## Instructions
+1. Adds the PHP `session_start()` command at a strategic point so that all pages have the session mechanism available.
+2. Store the user data sent from the welcome form in the PHP session and display a personalised message when the user is redirected to the  `/form-success` page.
 To do this, add the appropriate code to the place where `@todo` is indicated in the:
 - `HomeController.php`
 - `form-success.html.twig`
